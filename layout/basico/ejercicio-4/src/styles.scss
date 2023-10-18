@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 300px;
+
+  img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  h2 {
+    padding: 0 8px;
+  }
+
+  p {
+    padding: 0 8px;
+  }
+
+  small {
+    padding: 0 8px;
+    display: flex;
+    flex-direction: row-reverse;
+    color: #666;
+  }
+
+  button {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    margin: 8px;
+    cursor: pointer;
+    transition: 500ms;
+    &:hover {
+      background-color: #134c73;
+    }
+  }
+}

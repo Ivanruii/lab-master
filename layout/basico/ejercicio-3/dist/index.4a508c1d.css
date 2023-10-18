@@ -1,0 +1,33 @@
+nav ul {
+  background-color: #006673;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+nav ul li:hover {
+  background-color: #004049;
+}
+
+@media screen and (width <= 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    width: auto;
+    padding: 10px;
+  }
+}
+
+/*# sourceMappingURL=index.4a508c1d.css.map */

@@ -1,0 +1,48 @@
+@import "themes-dark";
+
+body {
+  font-family: $theme-primary-font;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.bg-primary {
+  background-color: $theme-primary-color;
+}
+
+.bg-important {
+  background-color: $theme-important-color;
+}
+
+.bg-warning {
+  background-color: $theme-warning-color;
+}
+
+.font-primary {
+  font-family: $theme-primary-font;
+}
+
+.font-secondary {
+  font-family: $theme-secondary-font;
+}
+
+.box-shadow {
+  box-shadow: $theme-box-shadow;
+}

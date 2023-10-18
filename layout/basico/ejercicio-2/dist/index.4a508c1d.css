@@ -1,0 +1,48 @@
+body {
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+.box {
+  text-align: center;
+  border: 1px solid #000;
+  place-content: center;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  display: grid;
+}
+
+#container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+}
+
+.bg-primary {
+  background-color: #333;
+}
+
+.bg-important {
+  background-color: #ffbf00;
+}
+
+.bg-warning {
+  background-color: #ff7300;
+}
+
+.font-primary {
+  font-family: Helvetica;
+}
+
+.font-secondary {
+  font-family: Georgia;
+}
+
+.box-shadow {
+  box-shadow: 4px 8px 10px #0009;
+}
+
+/*# sourceMappingURL=index.4a508c1d.css.map */

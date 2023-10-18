@@ -1,0 +1,30 @@
+nav {
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #006673;
+    li {
+      margin: 0;
+      padding: 10px 20px;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        background-color: #004049;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    ul {
+      flex-direction: column;
+      li {
+        width: auto;
+        padding: 10px;
+      }
+    }
+  }
+}

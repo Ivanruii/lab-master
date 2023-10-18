@@ -1,0 +1,88 @@
+@import 'Base.scss';
+
+body {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  color: black;
+}
+
+$primary-color-palette: (
+  darker-4: -40%,
+  darker-3: -30%,
+  darker-2: -20%,
+  darker-1: -10%,
+  base: 0%,
+  lighter-1: 10%,
+  lighter-2: 20%,
+  lighter-3: 30%,
+  lighter-4: 40%,
+);
+
+$secondary-color-palette: (
+  darker-4: -60%,
+  darker-3: -45%,
+  darker-2: -30%,
+  darker-1: -15%,
+  base: 0%,
+  lighter-1: 15%,
+  lighter-2: 30%,
+  lighter-3: 45%,
+  lighter-4: 48%,
+);
+
+@function adjust-color($color, $amount) {
+  @if $amount > 0 {
+    @return lighten($color, $amount);
+  } @else if $amount < 0 {
+    @return darken($color, $amount * -1);
+  } @else {
+    @return $color;
+  }
+}
+
+@mixin generate-palette-item($color, $base-color, $prefix) {
+  $color-amount: nth($color, 2);
+  $color-name: nth($color, 1);
+  $color: adjust-color($base-color, $color-amount);
+  background-color: $color;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-content: center;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+@mixin generate-palette($color-palette, $base-color, $prefix) {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  $i: 1;
+  @each $color in $color-palette {
+    li:nth-child(#{$i}) {
+      @include generate-palette-item($color, $base-color, $prefix);
+    }
+    $i: $i + 1;
+  }
+}
+
+.primary-palette {
+  @include generate-palette(
+    $primary-color-palette,
+    $color-base-primary,
+    "primary"
+  );
+}
+
+.secondary-palette {
+  @include generate-palette(
+    $secondary-color-palette,
+    $color-base-secondary,
+    "secondary"
+  );
+}
