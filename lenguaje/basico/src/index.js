@@ -33,7 +33,7 @@ const last = (array) => array[array.length - 1];
 // Test
 console.log('%cLast:', 'color: green; font-weight: bold;', last(array));
 
-console.log(`%c1. 2. Concat`, 'color: grey; font-weight: bold; font-size: larger;')
+console.log(`%c2. Concat`, 'color: grey; font-weight: bold; font-size: larger;')
 
 // Implementa una función concat (inmutable) tal que, dados 2 arrays como entrada, devuelva la concatenación de ambos. Utiliza rest / spread operators.
 
@@ -53,7 +53,7 @@ const concatMultipleArrays = (...arrays) => [].concat(...arrays);
 // Test
 console.log('%cConcatenated Multiple Arrays:', 'color: blue; font-weight: bold;', concatMultipleArrays(array1, array2, array3));
 
-console.log(`%cClone Merge`, 'color: grey; font-weight: bold; font-size: larger;')
+console.log(`%c3.Clone Merge`, 'color: grey; font-weight: bold; font-size: larger;')
 // Implementa una función clone que, a partir de un objeto de entrada source, devuelva un nuevo objeto con las propiedades de source.
 
 function clone(source) {
