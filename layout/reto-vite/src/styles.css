@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost');
+
+body {
+    background-color: #141414;
+    color: white;
+    font-family: Jost;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 25px;
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-size: 32px;
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "top"
+        "first"
+        "second";
+    place-content: center;
+}
+
+.section-title>.top {
+    grid-area: top;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.section-title>.first {
+    grid-area: first;
+}
+
+.first {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.first>.item>img {
+    width: 342px;
+}
+
+.section-title>.second {
+    grid-area: first;
+}
+
+.second {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.second>.item>img {
+    width: 342px;
+}
